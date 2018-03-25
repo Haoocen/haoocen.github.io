@@ -6,10 +6,20 @@ body, div, ul, li{
 	font-style: normal;
 	font:12px/22px "\5B8B\4F53",Arial, Helvetica, sans-serif} 
 
+div.mainpg{
+	background-color: darkslategrey;
+	height: 460px;
+	
+}
 ol, ul ,li{
 	list-style:none} 
 
 img {border: 0; vertical-align:middle} 
+
+img.headshot{
+	
+}
+
 
 body{
 	color:#000000;
@@ -48,3 +58,50 @@ ul#nav>li>a#name{
 ul#nav li a:hover{
 
 	color: #cec8c8;} 
+
+.container {
+    position: relative;
+	margin-left: auto;
+	margin-right: auto;
+    width: 50%;
+}
+
+.image {
+	margin: auto
+	display: block;
+	width: 255;
+ 	height: auto;
+}
+
+.overlay {
+	border-radius: 0%;
+	width: 255;
+	height: 255;
+	margin-left: 600;
+	
+	
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: darkslategrey;
+}
+
+.container:hover .overlay {
+    opacity: 0.5;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

@@ -58,10 +58,11 @@ div#contact{
 	padding: 13px;
 }
 
-img{
+div#contact-bar>img{
 	opacity: 0.5;	
 }
 
-img:hover{
+div#contact-bar>img:hover{
 	opacity: 1;	
 }
+

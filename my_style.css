@@ -48,3 +48,20 @@ ul#nav>li>a#name{
 ul#nav li a:hover{
 
 	color: #cec8c8;} 
+
+div#contact-bar{
+	align-items: center;
+	padding: 200px;
+}
+div#contact{
+	display: inline-block;
+	padding: 13px;
+}
+
+img{
+	opacity: 0.5;	
+}
+
+img:hover{
+	opacity: 1;	
+}

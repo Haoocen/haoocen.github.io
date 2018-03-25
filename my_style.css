@@ -9,7 +9,6 @@ body, div, ul, li{
 ol, ul ,li{
 	list-style:none} 
 
-img {border: 0; vertical-align:middle} 
 
 body{
 	color:#000000;
@@ -58,11 +57,11 @@ div#contact{
 	padding: 13px;
 }
 
-div#contact-bar>img{
+div#contact-bar img{
 	opacity: 0.5;	
 }
 
-div#contact-bar>img:hover{
+div#contact-bar img:hover{
 	opacity: 1;	
 }
 

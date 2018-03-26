@@ -7,7 +7,7 @@ body, div, ul, li{
 	font:12px/22px "\5B8B\4F53",Arial, Helvetica, sans-serif} 
 
 div.mainpg{
-	background-color: darkslategrey;
+	background-color: slategrey;
 	height: 460px;
 	
 }
@@ -89,7 +89,7 @@ ul#nav li a:hover{
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: darkslategrey;
+    background-color: slategrey;
 }
 
 .container:hover .overlay {

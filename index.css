@@ -1,107 +1,87 @@
-@charset "utf-8"; 
-
-body, div, ul, li{
-	margin:0; 
-	padding:0;
-	font-style: normal;
-	font:12px/22px "\5B8B\4F53",Arial, Helvetica, sans-serif} 
-
-div.mainpg{
-	background-color: slategrey;
-	height: 460px;
-	
-}
-ol, ul ,li{
-	list-style:none} 
-
-img {border: 0; vertical-align:middle} 
-
-img.headshot{
-	
-}
-
-
 body{
-	color:#000000;
-	background:#FFF; 
-	text-align:center} 
-a{
-	text-decoration: none;
+	background-color: #005c99;
+	
+	background-size: cover;
+	background-position: center;
+	font-family: lato;
+}
+
+html{
+	height: 100%;
+}
+
+#content{
+	text-align: center;
+	padding-top: 20%;
+	text-shadow: 0px 4px 3px rgba(255,255,255,0.4),
+				 0px 8px 10px rgba(255,255,255,0.1),
+}
+.navbar-default .navbar-nav>.active>a{
+	color: #f1f1f1;
+	background-color: #80ccff;
 	font-weight: bold;
-	font-family: georgia;}
-
-ul#nav{ 
-	width:60;
-	height:60px; 
-	background:#fff;
-	margin:0 auto} 
-
-ul#nav li{
-	display:inline; 
-	height:60px} 
-
-ul#nav li a{
-	display:inline-block;
-	padding:0 20px; 
-	height:60px; 
-	line-height:60px; 
-	color: #7b7e84; 
-	font-size:16px} 
-
-ul#nav>li>a#name{
-	padding:0 20px; 
-	height:60px; 
-	line-height:60px;
-	color:#7b7e84; 
-	font-size:30px} 
-
-ul#nav li a:hover{
-
-	color: #cec8c8;} 
-
-.container {
-    position: relative;
-	margin-left: auto;
-	margin-right: auto;
-    width: 50%;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #f8f8f8;
+	font-weight: bold;
 }
 
-.image {
-	margin: auto
-	display: block;
-	width: 255;
- 	height: auto;
+h1 , h3{
+	opacity: 1;
+	color: white;
 }
 
-.overlay {
-	border-radius: 0%;
-	width: 255;
-	height: 255;
-	margin-left: 600;
-	
-	
-	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: slategrey;
+ul.nav{
+	text-transform: uppercase;
+	font-family: raleway, Georgia, 'Times New Roman', Times, serif;
+	color: white;
+	margin: auto;
+	text-align: center;
+	font-size: 15px;
+	/* background-color: rgba(250, 250, 250, 0.3); */
 }
 
-.container:hover .overlay {
-    opacity: 0.5;
+.navbar-default {
+	background-color: rgba(250, 250, 250, 0.01); 
+	border-bottom: 2px solid rgba(250, 250, 250, 0.9); 
+    border: 0px;
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+
+
+h1{
+	width: 100%;
+	/* border: 1px solid black;  */
+	font-size: 7vw;
+	font-family: Yeseva One, Georgia, 'Times New Roman', Times, serif;
+	font-weight: bold
 }
+
+h3{
+	font-size: 3vw;
+	font-family: Yeseva One, Georgia, 'Times New Roman', Times, serif;
+	font-weight: raleway;
+
+}
+
+hr{
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+
+.navbar .navbar-nav {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+  }
+  
+.navbar .navbar-collapse {
+	text-align: center;
+  }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color:black;
+}
+

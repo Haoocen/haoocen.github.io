@@ -44,7 +44,7 @@ h2 {
 }
 
 .list-social-icons a:hover {
-  color: #7798ce;
+  color: lightgrey;
 }
 
 .list-social-icons a .fa-lg {
@@ -72,17 +72,21 @@ h2 {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 17rem;
+    width: 35%;
     height: 100vh;
   }
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
     padding: 0.5rem;
+    height: 60vh;
+    width: 90%;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 14rem;
-    max-height: 14rem;
+    width: 100%;
+    position: absolute;
+    top: 8%;
+    left:0;
     /* border: 0.5rem solid rgba(255, 255, 255, 0.2); */
   }
   #sideNav .navbar-collapse {
@@ -95,6 +99,9 @@ h2 {
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
     width: 100%;
+    position: absolute;
+    bottom: 10%;
+    right: 10px;
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
@@ -127,19 +134,21 @@ section.resume-section .resume-item .resume-date {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
+    width:78%;
+    float:right;
   }
 }
 
 .bg-primary {
-  background-color: #7798ce !important;
+  background-color: #343a40 !important;
 }
 
 .text-primary {
-  color: #7798ce !important;
+  color: lightgrey !important;
 }
 
 a {
-  color: #7798ce;
+  color: lightgrey;
 }
 
 a:hover, a:focus, a:active {
@@ -151,7 +160,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn-info:hover{
-  background-color:  #7798ce
+  background-color: lightgrey;
 }
 
 
@@ -229,6 +238,6 @@ width:110px;
 }
 
 #btmbtn{
-  margin-top:50%;
-
+  margin-top:5%;
+  margin-right:4%;
 }

@@ -72,7 +72,7 @@ h2 {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 30%;
     height: 100vh;
   }
   #sideNav .navbar-brand {
@@ -123,7 +123,8 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: 70vh;
+    min-width:60vh;
   }
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
@@ -134,7 +135,7 @@ section.resume-section .resume-item .resume-date {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
-    width:78%;
+    width:84%;
     float:right;
   }
 }

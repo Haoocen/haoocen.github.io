@@ -45,3 +45,7 @@ nav.addEventListener("mouseover", function(){
 nav.addEventListener("mouseout", function(){
   img.setAttribute("src","IMG/quote1.jpg");
 })
+
+
+
+document.querySelector("head").innerHTML += "<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">"

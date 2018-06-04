@@ -1,0 +1,60 @@
+﻿@font-face {
+	font-family: 'Georgia_TrueType_0';
+	src: local('Georgia_TrueType_0');
+	src: url('Georgia_TrueType_0.ttf') format('truetype');
+}
+
+.fmt-0{font-style:normal;font-weight:bold;font-family:Georgia_TrueType_0,Georgia,serif;color:#2e2e2e;font-size:13.92pt;}
+
+@font-face {
+	font-family: 'Cambria_TrueType_1';
+	src: local('Cambria_TrueType_1');
+	src: url('Cambria_TrueType_1.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Cambria_Math_TrueType_2';
+	src: local('Cambria_Math_TrueType_2');
+	src: url('Cambria_Math_TrueType_2.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Arial_TrueType_3';
+	src: local('Arial_TrueType_3');
+	src: url('Arial_TrueType_3.ttf') format('truetype');
+}
+
+.fmt-1{font-style:normal;font-weight:normal;font-family:Arial_TrueType_3,Arial,serif;color:#000000;font-size:12pt;}
+
+@font-face {
+	font-family: 'Times_New_Roman_TrueType_4';
+	src: local('Times_New_Roman_TrueType_4');
+	src: url('Times_New_Roman_TrueType_4.ttf') format('truetype');
+}
+
+.fmt-2{font-style:normal;font-weight:normal;font-family:Times_New_Roman_TrueType_4,Times New Roman,serif;color:#6f6f6f;font-size:12pt;}
+
+.fmt-3{font-style:normal;font-weight:normal;font-family:Times_New_Roman_TrueType_4,Times New Roman,serif;color:#6f6f6f;font-size:7.92pt;}
+
+@font-face {
+	font-family: 'Cambria_TrueType_5';
+	src: local('Cambria_TrueType_5');
+	src: url('Cambria_TrueType_5.ttf') format('truetype');
+}
+
+.fmt-4{font-style:normal;font-weight:normal;font-family:Arial_TrueType_3,Arial,serif;color:#6f6f6f;font-size:11.04pt;}
+
+@font-face {
+	font-family: 'Cambria_TrueType_6';
+	src: local('Cambria_TrueType_6');
+	src: url('Cambria_TrueType_6.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Symbol_TrueType_7';
+	src: local('Symbol_TrueType_7');
+	src: url('Symbol_TrueType_7.ttf') format('truetype');
+}
+
+.fmt-5{font-style:normal;font-weight:normal;font-family:Symbol_TrueType_7,Symbol,serif;color:#000000;font-size:12pt;}
+

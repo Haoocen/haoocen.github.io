@@ -2,8 +2,15 @@ html{
     max-width: 100vh;
     margin: auto;
 }
-body{
+.big{
     font-size: 2vh;
+}
+
+.small{
+    font-size: 1.5vh;
+}
+body{
+    font-size: 1.7vh;
 }
 
 #myBtn {
@@ -28,3 +35,18 @@ body{
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
+
+h1, h2 {
+    font-weight: bold;
+    margin: 1.2em 0 .6em 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h1{
+    font-size: 6vh;
+}
+h2{
+    font-size: 4.5vh;
+}
+

@@ -1,14 +1,12 @@
-<!DOCTYPE html><html><head><title>CS246</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>.note-content  {font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, Song, sans-serif;}
-
-
-.note-content html {margin-left: 20%;}
-.note-content h1, .note-content h2 {text-align: center; text-decoration: underline;}
-</style><script src="../markdown.js"></script></head><body><div id='preview-contents' class='note-content'>
+<!DOCTYPE html><html><head><title>CS246</title><meta charset='utf-8'>
+<link rel="stylesheet" href="marxico.css">
+<script src="../markdown.js"></script>
+</head><body><div id='preview-contents' class='note-content'>
                         
                     
-                        <a href='../notes.html'>Back</a>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <a href='../notes.html'>Back</a><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <h1 id="cs246">CS246</h1>
 
 <p><strong>Professor</strong> Victoria Sakhnini <br>
@@ -18,8 +16,8 @@
 
 <div><div class="toc"><div class="toc">
 <ul>
-<li><a href="#cs246">CS246</a><ul>
-<li><a href="#shell">Shell</a></li>
+<li><a href="#cs246">CS246</a></li>
+<li><a href="#shell">Shell</a><ul>
 <li><a href="#file-system">File System</a></li>
 <li><a href="#quoting">Quoting</a></li>
 <li><a href="#shell-commands">Shell Commands</a></li>
@@ -34,14 +32,14 @@
 <li><a href="#control-structures">Control Structures</a><ul>
 <li><a href="#test">Test</a></li>
 <li><a href="#condition">Condition</a></li>
-<li><a href="#examples">EXAMPLES</a><ul>
+<li><a href="#examples">EXAMPLES</a></li>
 <li><a href="#procedures-payday">Procedures: payday</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#intro-to-c">Intro to C++</a><ul>
-<li><a href="#between-c-and-c">Between C and C++</a></li>
+<li><a href="#c">C++</a><ul>
+<li><a href="#between-c-and-c">Between C and C++</a><ul>
 <li><a href="#compilation">Compilation</a></li>
 </ul>
 </li>
@@ -68,16 +66,13 @@
 <li><a href="#dynamic-memory">Dynamic Memory</a></li>
 <li><a href="#returning-by-valueptrref">Returning by Value/Ptr/Ref</a></li>
 <li><a href="#operator-overload">Operator overload</a><ul>
-<li><a href="#overloading-1">Overloading &lt;&lt;, &gt;&gt;</a></li>
+<li><a href="#example-overloading">EXAMPLE: Overloading &lt;&lt;, &gt;&gt;</a></li>
 </ul>
 </li>
 <li><a href="#the-preprocessor">The preprocessor</a><ul>
-<li><ul>
 <li><a href="#include">include</a></li>
 <li><a href="#define-var-value">#define VAR VALUE</a></li>
 <li><a href="#define-flag">#define FLAG</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a href="#testing">Testing</a><ul>
@@ -100,10 +95,7 @@
 <li><a href="#initializing-objects">initializing objects:</a></li>
 </ul>
 </li>
-</ul>
-</li>
 <li><a href="#constructor-continued">Constructor continued</a><ul>
-<li><ul>
 <li><a href="#advantages-of-creating">Advantages of creating</a></li>
 <li><a href="#default-parameters">Default parameters</a></li>
 <li><a href="#mil">MIL</a></li>
@@ -112,6 +104,9 @@
 <li><a href="#note">Note</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#cs246lec10">CS246Lec10</a><ul>
 <li><a href="#destructor">Destructor</a></li>
 <li><a href="#copy-assignment-operator">Copy assignment operator</a><ul>
 <li><a href="#move-constructor">Move Constructor</a></li>
@@ -119,6 +114,50 @@
 </li>
 </ul>
 </li>
+<li><a href="#cs246lec11">CS246Lec11</a><ul>
+<li><ul>
+<li><a href="#notes">Notes:</a></li>
+</ul>
+</li>
+<li><a href="#classes-continued">Classes continued</a><ul>
+<li><a href="#rule-of-five">Rule of Five</a></li>
+<li><a href="#separate-compilation-of-classes">Separate compilation of classes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#cs246lec12">CS246lec12</a><ul>
+<li><ul>
+<li><a href="#const-mutable-and-static-keywords">const, mutable and static keywords</a><ul>
+<li><a href="#static-method">Static Method</a></li>
+<li><a href="#in-summary">In summary</a></li>
+</ul>
+</li>
+<li><a href="#private">Private</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#cs246lec13">CS246Lec13</a><ul>
+<li><ul>
+<li><a href="#iterator">Iterator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#cs246lec14">CS246Lec14</a><ul>
+<li><ul>
+<li><a href="#more-on-friends">More on Friends</a></li>
+</ul>
+</li>
+<li><a href="#system-modeling-uml-and-relationships">System Modeling (UML) and relationships</a><ul>
+<li><a href="#composition">Composition</a></li>
+<li><a href="#aggregation">Aggregation</a></li>
+<li><a href="#inheritance">Inheritance</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -126,7 +165,7 @@
 
 
 
-<h2 id="shell">Shell</h2>
+<h1 id="shell">Shell</h1>
 
 <ul><li>Computer interaction requires mechanisms to display information and perform operations.</li>
 <li>Two main approaches: <br>
@@ -700,7 +739,7 @@ the script. Usually <code>#! /bin/bash</code> <br>
 
 
 
-<h4 id="procedures-payday">Procedures: <em>payday</em></h4>
+<h3 id="procedures-payday">Procedures: <em>payday</em></h3>
 
 
 
@@ -728,11 +767,11 @@ the script. Usually <code>#! /bin/bash</code> <br>
 
 
 
-<h2 id="intro-to-c">Intro to C++</h2>
+<h1 id="c">C++</h1>
 
 
 
-<h3 id="between-c-and-c">Between C and C++</h3>
+<h2 id="between-c-and-c">Between C and C++</h2>
 
 
 
@@ -1269,7 +1308,7 @@ the script. Usually <code>#! /bin/bash</code> <br>
 
 
 
-<h3 id="overloading-1">Overloading <code>&lt;&lt;</code>, <code>&gt;&gt;</code></h3>
+<h3 id="example-overloading">EXAMPLE: <strong>Overloading <code>&lt;&lt;</code>, <code>&gt;&gt;</code></strong></h3>
 
 <p><em>c++/opeartprs/grades.cc</em></p>
 
@@ -1316,7 +1355,7 @@ the script. Usually <code>#! /bin/bash</code> <br>
 
 
 
-<h4 id="include"><code>include</code></h4>
+<h3 id="include"><code>include</code></h3>
 
 <ul><li><code>#include &lt;iostream&gt;</code> <br>
 <ul>
@@ -1332,14 +1371,14 @@ the script. Usually <code>#! /bin/bash</code> <br>
 
 
 
-<h4 id="define-var-value"><code>#define VAR VALUE</code></h4>
+<h3 id="define-var-value"><code>#define VAR VALUE</code></h3>
 
 <ul><li>we have C++ const. ????</li>
 </ul>
 
 
 
-<h4 id="define-flag"><code>#define FLAG</code></h4>
+<h3 id="define-flag"><code>#define FLAG</code></h3>
 
 <p>example:</p>
 
@@ -1672,7 +1711,7 @@ the script. Usually <code>#! /bin/bash</code> <br>
 
 
 
-<h1 id="constructor-continued">Constructor continued</h1>
+<h2 id="constructor-continued">Constructor continued</h2>
 
 
 
@@ -1949,6 +1988,21 @@ the script. Usually <code>#! /bin/bash</code> <br>
 
 
 
+<h1 id="cs246lec10">CS246Lec10</h1>
+
+<p></p>
+
+<hr>
+
+<p><strong>From last time</strong></p>
+
+<ul><li><code>Node n</code>:the default constructor does allocate the space when no argument is passed, but the fields are not initialized.</li>
+<li>we can overwrite the default constructor by having <strong>default parameters</strong> </li>
+<li><code>Node m = n</code>: copy ctor is invoked. The default one will only copy field by field. Thus the value is copied, as well as the pointer field. </li>
+</ul>
+
+
+
 <h2 id="destructor">Destructor</h2>
 
 <ul><li>a destructor is invoked every time when an object is destroyed(out of scope), or on heap, when you call <code>delete</code></li>
@@ -2052,4 +2106,665 @@ the script. Usually <code>#! /bin/bash</code> <br>
 </div><div class="hljs-line">    <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;
 </div><div class="hljs-line">}
 </div><div class="hljs-line"><wbr>
-</div></code></pre></div></body></html>
+</div></code></pre>
+
+<hr>
+
+
+
+<h1 id="cs246lec11">CS246Lec11</h1>
+
+<p></p>
+
+<hr>
+
+
+
+<h3 id="notes">Notes:</h3>
+
+<ul><li>if you <em>don’t define a move constructor / move assignment operator,</em> the <strong>copying version</strong> of these operators will be used instead.</li>
+<li>if the <strong>move constructor / move assignment operator</strong> is defined, it will replace all calls to the copy constructor / copy assignment operator, where the argument is a temporary (rvalue)</li>
+<li>They point of having because we know that <strong>a temporary memory will be created</strong> for the rvalue, so the only thing we need to do is to swap and use the memory while deleting the old data from the memory.</li>
+<li>The main difference is that move constructor consume a <strong>reference to an rvalue</strong>, i.e. <code>&amp;&amp;other</code></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">struct</span> Vec{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> x, y;
+</div><div class="hljs-line">    <span class="hljs-comment">//ctor</span>
+</div><div class="hljs-line">    <span class="hljs-comment">//copy ctor</span>
+</div><div class="hljs-line">    <span class="hljs-comment">//move ctor</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function">Vec <span class="hljs-title">makeAVec</span><span class="hljs-params">()</span></span>{
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span>{<span class="hljs-number">0</span>,<span class="hljs-number">0</span>}; <span class="hljs-comment">// the constructor is invoked</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+</div><div class="hljs-line">    Vec v = makeAVec();
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>the compiler optimizes and doesn’t actually create any temporary memory, and the new vector is created and assigned to v immediately.</li>
+<li>This is called <strong>copy/move elision</strong>, (compiler optimization)</li>
+<li><code>doSomething(makeAVec());</code> it seems that the move constructor will be invoked, but move elision happens, and no temporary memory is created.</li>
+<li>Also if you want to know the exact behavior of the compiler, we can eliminate the features by calling the compiler <code>g++ -fno-elide-constructors</code>, but this is <strong>not encouraged</strong>.</li>
+</ul>
+
+<hr>
+
+
+
+<h2 id="classes-continued">Classes continued</h2>
+
+
+
+<h3 id="rule-of-five">Rule of Five</h3>
+
+<ul><li>if there is a need (eg. avoid shallow copy) to create one of the constructors, you need to <strong>create all of them.</strong></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">struct</span> Vec{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> x,y;
+</div><div class="hljs-line">    Vec <span class="hljs-keyword">operator</span>+(<span class="hljs-keyword">const</span> Vec &amp;other){
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> {x+other.x, y+other.y};<span class="hljs-comment">//</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    Vec <span class="hljs-keyword">operator</span>*(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> k){
+</div><div class="hljs-line">        <span class="hljs-keyword">return</span> {x*k, y*k};
+</div><div class="hljs-line">    } <span class="hljs-comment">// now v1*10 is valid, but not 10*v1, which we need to define outside the struct</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">Vec <span class="hljs-keyword">operator</span>*(<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> k, <span class="hljs-keyword">const</span> Vec &amp;v){
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> v*k; <span class="hljs-comment">// the method defined is invoked</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">v1+v2;<span class="hljs-comment">// v1 is this and v2 is other, this is passed implicitly </span>
+</div></code></pre>
+
+<ul><li>We are able to overload the operator because they have different type of parameters, <em>not different # of parameters</em></li>
+<li>The compiler nows which <code>*</code> to invoke by looking at the type of parameters.</li>
+<li>The second operator <code>*</code> defined above is alled <strong>stand along function</strong></li>
+<li>To implement <code>&gt;&gt;</code> and <code>&lt;&lt;</code> <br>
+<ul>
+<li>it’s possible to define them as methods, then the first argument of the method should be a structure. Thus we have do <code>v &gt;&gt; cin</code> and <code>v &lt;&lt; cout</code></li>
+<li>they should be implemented as stand along functions</li></ul></li>
+<li>There are some operators that <strong>have to be defined as methods (members)</strong>  <br>
+<ul>
+<li><code>operator=</code> assignment</li>
+<li><code>operator[]</code> like-array access</li>
+<li><code>operator -&gt;</code> like-pointer access</li>
+<li><code>operator()</code> <em>you can create a function with the same name as the constructor</em></li>
+<li><code>operator T</code> conversion from one type to another </li></ul></li>
+<li>a complete example is in c++/classes/memberop</li>
+</ul>
+
+
+
+<h3 id="separate-compilation-of-classes">Separate compilation of classes</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//node.h</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> _NODE_H_</span>
+</div><div class="hljs-line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> _NODE_H_</span>
+</div><div class="hljs-line"><span class="hljs-keyword">struct</span> Node{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> data;
+</div><div class="hljs-line">    Node *next;
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Node</span><span class="hljs-params">(<span class="hljs-keyword">int</span> data, Node *next=<span class="hljs-literal">nullptr</span>)</span></span>;
+</div><div class="hljs-line">    Node(<span class="hljs-keyword">const</span> Node &amp;n);
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+</div></code></pre>
+
+<ul><li>review: we have <code>explicit</code> to avoid implicit conversion. i.e. only integers</li>
+<li>we are expected to see the implementation of the methods;</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//node.cc</span>
+</div><div class="hljs-line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"node.h"</span></span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">Node::Node(<span class="hljs-keyword">int</span> data, Node *next=<span class="hljs-literal">nullptr</span>): ... {}
+</div><div class="hljs-line">Node::Node(<span class="hljs-keyword">const</span> Node &amp;n): ... {}
+</div></code></pre>
+
+<ul><li><code>::</code> is called <strong>scope resolution operator</strong></li>
+<li>they are always used when the left side is a class type. </li>
+<li>From this point we will be separating  definition and implementation</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">struct</span> Vec{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> x,y;
+</div><div class="hljs-line">    Vec(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y): x{x}, y{y}{}
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">////////////////////////////////////////////////////////</span>
+</div><div class="hljs-line">Vec *vp = <span class="hljs-keyword">new</span> Vec[<span class="hljs-number">10</span>];
+</div><div class="hljs-line">Vec moreVectors[<span class="hljs-number">15</span>]; <span class="hljs-comment">//both calls are invalid </span>
+</div><div class="hljs-line"><span class="hljs-comment">////////////////////////////////////////////////////////</span>
+</div></code></pre>
+
+<ul><li>The two array calls are both invalid because the <strong>default constructor is no longer available</strong>, thus we cannot use without passing zero parameters</li>
+<li>The solution is to add a version that allows zero arguments.</li>
+</ul>
+
+<p><strong>Solutions</strong></p>
+
+<ol><li rel="1">provide a default ctor (ctor that consumes no argument)</li>
+<li rel="2">initialize them with available methods: <br>
+<ul>
+<li>for stack array <code>Vec moreVectors[3] = {Vec{0,0}, Vec{1,2}, Vec{5,-3}};</code></li>
+<li>for heap array: <code>Vec **vp = new Vec *[5]</code> <code>vp[0] = new Vec{0,0}</code> <code>...</code>, and we destroy this by doing a loop to deallocate all the memories allocated for the vectors , then the array of pointers</li></ul></li>
+</ol>
+
+<hr>
+
+
+
+<h1 id="cs246lec12">CS246lec12</h1>
+
+<p></p>
+
+<hr>
+
+
+
+<h3 id="const-mutable-and-static-keywords"><code>const</code>, <code>mutable</code> and <code>static</code> keywords</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//.h file</span>
+</div><div class="hljs-line"><span class="hljs-keyword">struct</span> Student{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> assns, mt, final;
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">grade</span><span class="hljs-params">()</span></span>;
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//.cc file</span>
+</div><div class="hljs-line"><span class="hljs-keyword">float</span> Student::grade(){
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> ...;
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>Within the function <code>int f(const Student st){...}</code> , we stated that the Student <code>st</code> is constant. But the method <code>grade</code> we defined above did’t specify that it wouldn’t modify the fields.</li>
+<li>To solve this problem, we need to declare and implement by adding a <code>const</code> keyword after the bracket. i.e. <code>float Student::grade() const {...}</code></li>
+</ul>
+
+<p><strong>BUT,</strong> if we do want to mutate one of the fields, for example <code>numMethodCalls</code>, we cannot have it as const anymore.</p>
+
+<ol><li rel="1">We should still keep the <code>const</code> keyword</li>
+<li rel="2">The fact is that we need to keep the one field while keep other fields as constant.</li>
+<li rel="3"><strong>We can define one specific field to be mutable</strong>, while all others are stay constant.</li>
+</ol>
+
+<p><strong>To do so, we simply add the keyword<code>mutable</code></strong> even though the method is constant.</p>
+
+<p>Now, <strong>modified as</strong></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//.h file</span>
+</div><div class="hljs-line"><span class="hljs-keyword">struct</span> Student{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> assns, mt, final;
+</div><div class="hljs-line">    <span class="hljs-keyword">mutable</span> <span class="hljs-keyword">int</span> numMethodCalls = <span class="hljs-number">0</span>;
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">grade</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//.cc file</span>
+</div><div class="hljs-line"><span class="hljs-keyword">float</span> Student::grade() <span class="hljs-keyword">const</span>{
+</div><div class="hljs-line">    ++numMethodsCalls;
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> ...;
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>now the <code>numMethodsCalls</code> keeps track of the numbers of the method calls for the specific instance of the class <code>Student</code>, but what if we want a counter for the class? (count how many <code>Student</code>s are created). And it the counter should be incremented by the <strong>constructor</strong>.</li>
+<li>There is one more keyword called <code>static</code></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//.h file</span>
+</div><div class="hljs-line"><span class="hljs-keyword">struct</span> Student{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> assns, mt, final;
+</div><div class="hljs-line">    <span class="hljs-keyword">mutable</span> <span class="hljs-keyword">int</span> numMethodCalls = <span class="hljs-number">0</span>;
+</div><div class="hljs-line">    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numInstances; <span class="hljs-comment">//static field</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">grade</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printNumInstances</span><span class="hljs-params">()</span></span>{ <span class="hljs-comment">// this is a static method </span>
+</div><div class="hljs-line">        <span class="hljs-built_in">cout</span> &lt;&lt; numInstacnces &lt;&lt; <span class="hljs-built_in">endl</span>;  
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">Student(...){
+</div><div class="hljs-line">    ++numInstances;
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">//.cc file</span>
+</div><div class="hljs-line"><span class="hljs-keyword">float</span> Student::grade() <span class="hljs-keyword">const</span>{
+</div><div class="hljs-line">    ++numMethodsCalls;
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> ...;
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">int</span> Student::numInstances = <span class="hljs-number">0</span>;
+</div></code></pre>
+
+<ul><li>Now the static field is <em>defined with the class,</em> it should be <strong>intilized in the implementation file</strong>.</li>
+</ul>
+
+
+
+<h4 id="static-method">Static Method</h4>
+
+<ul><li>doesn’t depend on a specific object.</li>
+<li>doesn’t have implicit <code>this</code></li>
+<li>it can access only <code>static</code> fields.</li>
+</ul>
+
+
+
+<h4 id="in-summary">In summary</h4>
+
+<ul><li><code>mutable</code> fields can be changed even if the object is constant</li>
+<li><code>static</code> fields are associated with the class itself, not with a particular object.</li>
+<li><code>static</code> fields must be defined outside the class.</li>
+<li>complete example in <code>c++/classes/static</code> <code>c++/classes/const</code></li>
+</ul>
+
+<hr>
+
+<h3 id="private">Private</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">struct</span> Node{
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+</div><div class="hljs-line">    Node n1{<span class="hljs-number">1</span>, <span class="hljs-keyword">new</span> Node{<span class="hljs-number">2</span>, <span class="hljs-literal">nullptr</span>}};
+</div><div class="hljs-line">    Node n2{<span class="hljs-number">3</span>, <span class="hljs-literal">nullptr</span>};
+</div><div class="hljs-line">    Node n3{<span class="hljs-number">4</span>, &amp;n2};
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>problem occur when destructing n3, when n2 is out of scope, it is popped out of the stack. Now <code>n3.next</code> is pointing to the stack that has already be unaccessible. </li>
+<li>when designing the program, the intention is that the <code>next</code> should always be either<code>nullptr</code> or a pointer to another node.</li>
+<li>the root problem is that we give the user the permission to access the field of the class.  <br>
+<ul>
+<li>By default, all the fields and methods are visible. The solution could be making the fields to be <strong>private</strong>, and force the user to use those methods/fields by using other methods.</li>
+<li>Conventionally, we can make all the fields <strong>private</strong></li></ul></li>
+<li>Thus if we define the <code>struct</code> as <code>class</code>, the default visibility is now private</li>
+<li>whatever you want to make blocks public, just ass <code>public:</code> </li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> Node{
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line"><span class="hljs-keyword">private</span>:
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<p><strong>To fix the problem:</strong></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">// .h file</span>
+</div><div class="hljs-line"><span class="hljs-keyword">class</span> List{
+</div><div class="hljs-line">    <span class="hljs-keyword">struct</span> Node; <span class="hljs-comment">//nested class private</span>
+</div><div class="hljs-line">    Node *theList = <span class="hljs-literal">nullptr</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addToFront</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span></span>;
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">ith</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span></span>;
+</div><div class="hljs-line">    ~List();
+</div><div class="hljs-line">};
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-comment">// .cc file</span>
+</div><div class="hljs-line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">"...h"</span></span>
+</div><div class="hljs-line"><span class="hljs-keyword">struct</span> List::Node{<span class="hljs-comment">//scope resolution</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> data;
+</div><div class="hljs-line">    Node *next;
+</div><div class="hljs-line">    Node(<span class="hljs-keyword">int</span> data, Node* next):data{data}, next{next}{}
+</div><div class="hljs-line">    ~Node(){<span class="hljs-keyword">delete</span> next;}
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">List::~List(){<span class="hljs-keyword">delete</span> theList;}
+</div><div class="hljs-line"><span class="hljs-keyword">void</span> List::addToFront(<span class="hljs-keyword">int</span> n){theList = <span class="hljs-keyword">new</span> Node(n, theList);}
+</div><div class="hljs-line"><span class="hljs-keyword">int</span> List::ith(<span class="hljs-keyword">int</span> i){
+</div><div class="hljs-line">    Node *cur = theList;
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i &amp;&amp; cur; ++j, cur=cur-&gt;next);
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> cur-&gt;data;
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+<ul><li>inside the nested class, since by default everything is private, it doesn’t matter whether <code>Node</code> is a struct or a class.     </li>
+</ul>
+
+<hr>
+
+
+
+<h1 id="cs246lec13">CS246Lec13</h1>
+
+<p></p>
+
+<hr>
+
+
+
+<h3 id="iterator">Iterator</h3>
+
+<ul><li>an iterator is an abstraction of a pointer </li>
+<li>there is a feature in C++ <code>auto x = y</code> that shortens the program, assigns the type of RHS to LHS</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> List{
+</div><div class="hljs-line">    <span class="hljs-keyword">struct</span> Node;
+</div><div class="hljs-line">    Node *theList;
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    <span class="hljs-keyword">class</span> Iterator{
+</div><div class="hljs-line">        Node *p;
+</div><div class="hljs-line">        <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Iterator</span><span class="hljs-params">(Node *p)</span>:p</span>{p}{} <span class="hljs-comment">//constructor</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">        <span class="hljs-function">Int &amp;<span class="hljs-title">operator</span><span class="hljs-params">()</span></span>{<span class="hljs-keyword">return</span> p-&gt;data;} <span class="hljs-comment">//dereferencing </span>
+</div><div class="hljs-line">        Iterator &amp;<span class="hljs-keyword">operator</span>++(){ <span class="hljs-comment">//iterator points to the next </span>
+</div><div class="hljs-line">            p = p-&gt;next
+</div><div class="hljs-line">            <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">        <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-keyword">const</span> Iterator &amp;other) <span class="hljs-keyword">const</span> { <span class="hljs-keyword">return</span> p == other.p; }
+</div><div class="hljs-line">        <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span>!=(<span class="hljs-keyword">const</span> Iterator &amp;other) <span class="hljs-keyword">const</span> { <span class="hljs-keyword">return</span> !(*<span class="hljs-keyword">this</span> == other); }
+</div><div class="hljs-line">        <span class="hljs-keyword">friend</span> <span class="hljs-keyword">class</span> List;
+</div><div class="hljs-line">    };
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-comment">// now that the constructor is defined privately, it prevent begin and end.</span>
+</div><div class="hljs-line">    <span class="hljs-comment">// access is given by friend</span>
+</div><div class="hljs-line">    <span class="hljs-function">Iterator <span class="hljs-title">begin</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> Iterator(theList); } <span class="hljs-comment">//points to this.theList</span>
+</div><div class="hljs-line">    <span class="hljs-function">Iterator <span class="hljs-title">end</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> Iterator(<span class="hljs-literal">nullptr</span>); }
+</div><div class="hljs-line">};
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+</div><div class="hljs-line">    List lst;
+</div><div class="hljs-line">    lst.addToFront(<span class="hljs-number">1</span>);
+</div><div class="hljs-line">    lst.addToFront(<span class="hljs-number">2</span>);
+</div><div class="hljs-line">    lst.addToFront(<span class="hljs-number">3</span>);
+</div><div class="hljs-line">    <span class="hljs-keyword">for</span> (List::Iterator it = lst.begin(); it!=lst.end(); ++it){
+</div><div class="hljs-line">        <span class="hljs-built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="hljs-built_in">endl</span>;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>C++ built-in supports iterator pattern: <strong>the range-based loop</strong>, if and only if the class has the following properties: <br>
+<ol>
+<li rel="1"><code>end()</code> and <code>begin()</code> are defined</li>
+<li rel="2">the iterator supports <code>++</code>,<code>!=</code>,<code>*</code></li></ol></li>
+<li>passing the reference allows us to modify the list</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> &amp;n : l) {
+</div><div class="hljs-line">      ++n;
+</div><div class="hljs-line">      <span class="hljs-built_in">cout</span> &lt;&lt; n &lt;&lt; <span class="hljs-built_in">endl</span>;
+</div><div class="hljs-line">  }
+</div><div class="hljs-line">  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> n : l) {
+</div><div class="hljs-line">      <span class="hljs-built_in">cout</span> &lt;&lt; n &lt;&lt; <span class="hljs-built_in">endl</span>;
+</div><div class="hljs-line">  }
+</div></code></pre>
+
+<hr>
+
+<p>Sometimes we may want to give access to the users:</p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> Vec{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> x, y;
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getX</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>{ <span class="hljs-keyword">return</span> x; }<span class="hljs-comment">// accessor for field x</span>
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setY</span><span class="hljs-params">(<span class="hljs-keyword">int</span> newY)</span></span>{ y = newY; }
+</div><div class="hljs-line">};
+</div></code></pre>
+
+<hr>
+
+<h1 id="cs246lec14">CS246Lec14</h1>
+
+<p></p>
+
+<hr>
+
+
+
+<h3 id="more-on-friends">More on Friends</h3>
+
+<p><em>c++/classes/friends</em></p>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> Vec{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> x, y;
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    <span class="hljs-keyword">friend</span> ostream &amp;<span class="hljs-keyword">operator</span>&lt;&lt;(ostream &amp;out, <span class="hljs-keyword">const</span> Vec &amp;v);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">ostream &amp;<span class="hljs-keyword">operator</span>&lt;&lt;(ostream &amp;out, <span class="hljs-keyword">const</span> Vec &amp;v){
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> out &lt;&lt; v.x &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; v.y;
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>It has a problem because the stand along function is unable to access the field directly</li>
+<li>This problem can be solved be adding accessors.</li>
+<li><strong>Another solution</strong> is to declare this function inside the class as a <strong>friend</strong>.</li>
+</ul>
+
+<hr>
+
+
+
+<h2 id="system-modeling-uml-and-relationships">System Modeling (UML) and relationships</h2>
+
+<hr>
+
+
+
+<h3 id="composition">Composition</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> Vec{
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> x, y;
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    Vec(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y): x{x},y{y}{}
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">class</span> Basis{
+</div><div class="hljs-line">    Vec v1, v2;
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">    Basis():v1{<span class="hljs-number">0</span>,<span class="hljs-number">0</span>}, v2{<span class="hljs-number">0</span>,<span class="hljs-number">0</span>}{}
+</div><div class="hljs-line">};
+</div></code></pre>
+
+<ul><li><code>Basis</code> owns-a 2 <code>Vec</code></li>
+<li>A “owns-a” B: <br>
+<ul>
+<li>B has no identity outside A</li>
+<li>if A is destroyed then B is destroyed</li>
+<li>if A is copied then B is copied </li></ul></li>
+<li>When <code>Basis b;</code> : <br>
+<ul>
+<li>When the default constructor for <code>Basis</code> is called, fields are initialized, but we have an issue here because there is no default constructor for <code>Vec</code></li>
+<li><code>Basis(){v1=Vec{0,0}; v2={0,0}}</code> this constructor won’t work because the body of the constructor will not bu run until the fields are initialized.</li>
+<li>Solution is to use <strong>MIL</strong> </li></ul></li>
+</ul>
+
+
+
+<h3 id="aggregation">Aggregation</h3>
+
+<ul><li>A “has-a” B: <br>
+<ul>
+<li>B has an existence apart from A</li>
+<li>If A is destroyed, B lives on</li>
+<li>If A is copied, B is not copied </li>
+<li><em>B doesn’t know about the existence of B</em></li>
+<li><em>B could belong to more than one A</em></li>
+<li><em>A is <strong>not</strong> responsible for destroying B</em></li></ul></li>
+<li>A has to have pointers to objects with type B</li>
+<li>When defining the <strong>destructor</strong> of A, we have to make sure that B is not destroyed.</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> Teacher{
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> name;
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    Teacher(<span class="hljs-built_in">string</span> name): name{name}{}
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span></span>{<span class="hljs-keyword">return</span> name}
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">class</span> Department{
+</div><div class="hljs-line">    Teacher * m-teacher[<span class="hljs-number">100</span>];
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> t_Num;
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    Department():t_Num{<span class="hljs-number">0</span>}{}
+</div><div class="hljs-line">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add_teacher</span><span class="hljs-params">(Teacher *teacher)</span></span>{
+</div><div class="hljs-line">        m_teacher[t_Num] = teacher;
+</div><div class="hljs-line">        ++t_Num;
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>in the example above a <code>Department</code> has-a <code>Teacher</code></li>
+<li>the default destructor of <code>Department</code> actually did an shallow delete</li>
+<li>the default copy constructor of <code>Department</code> actually did an shallow copy</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+</div><div class="hljs-line">    Teacher *teacher1 = <span class="hljs-keyword">new</span> Teacher(<span class="hljs-string">"Bob"</span>);
+</div><div class="hljs-line">    Teacher *teacher2 = <span class="hljs-keyword">new</span> Teacher(<span class="hljs-string">"Mary"</span>);
+</div><div class="hljs-line">    {
+</div><div class="hljs-line">        Department dept;
+</div><div class="hljs-line">        dept.add_teacher(teacher1);
+</div><div class="hljs-line">        dept.add_teacher(teacher2);
+</div><div class="hljs-line">    } <span class="hljs-comment">// destructor for dept is invoked</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-built_in">cout</span> &lt;&lt; teacher1.getName() &lt;&lt; <span class="hljs-built_in">endl</span>; <span class="hljs-comment">// make sure Teacher still exist</span>
+</div><div class="hljs-line">    <span class="hljs-keyword">delete</span> teacher1;
+</div><div class="hljs-line">    <span class="hljs-keyword">delete</span> teacher2;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<hr>
+
+
+
+<h3 id="inheritance">Inheritance</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> Book{
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> title, author;
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> numPages;
+</div><div class="hljs-line"><span class="hljs-keyword">public</span>:
+</div><div class="hljs-line">    Book(...);
+</div><div class="hljs-line">    ... 
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">class</span> Text{
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> title, author;
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> numPages;
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> topic;
+</div><div class="hljs-line">Public:
+</div><div class="hljs-line">    Text(...);
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">class</span> Comic{
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> title, author;
+</div><div class="hljs-line">    <span class="hljs-keyword">int</span> numPages;
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> hero;
+</div><div class="hljs-line">Public:
+</div><div class="hljs-line">    Comic(...);
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">union</span> BookTypes{Book *b, Text *t, Comic *c};
+</div><div class="hljs-line">BookTypes myBook[<span class="hljs-number">20</span>];
+</div></code></pre>
+
+<ul><li>Among the three classes, we are duplicating information</li>
+<li>We can capture the relationships of the classes  <br>
+<ul>
+<li><code>Text</code> and <code>Comic</code> inherited from  <code>Book</code></li>
+<li><code>Book</code> is a base class (superclass)</li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-cpp hljs"><div class="hljs-line"><span class="hljs-keyword">class</span> Text: <span class="hljs-keyword">public</span> Book{
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> topic;
+</div><div class="hljs-line">Public:
+</div><div class="hljs-line">    Text(<span class="hljs-built_in">string</span> title, <span class="hljs-built_in">string</span> author, <span class="hljs-keyword">int</span> numPages, <span class="hljs-built_in">string</span> topic):
+</div><div class="hljs-line">    Book{title, author, numPages} topic{topic} <span class="hljs-comment">//step 2, step 3</span>
+</div><div class="hljs-line">    {}<span class="hljs-comment">//step 4</span>
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-keyword">class</span> Comic: <span class="hljs-keyword">public</span> Book{
+</div><div class="hljs-line">    <span class="hljs-built_in">string</span> hero;
+</div><div class="hljs-line">Public:
+</div><div class="hljs-line">    Comic(...);
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ul><li>in this case, <code>Text</code> and <code>Comic</code> are subclasses (Derived)</li>
+<li><strong>Each subclass inherits all fields and methods from the superclass.</strong> <br>
+<ul>
+<li>Any method that can be called on a <code>Book</code> can be called on a <code>Text</code> or <code>Comic</code> object.</li></ul></li>
+<li>But it doesn’t that subclasses have the access to the private field of the superclass.</li>
+<li><strong>When an object is constructed:</strong> <br>
+<ol>
+<li rel="1">Space is allocated</li>
+<li rel="2">The <strong>superclass</strong> fields are constructed </li>
+<li rel="3">Fields are constructed.</li>
+<li rel="4">The constructor body runs</li></ol></li>
+</ul></div></body></html>

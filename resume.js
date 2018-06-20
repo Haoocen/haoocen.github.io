@@ -39,12 +39,12 @@
 var nav = document.getElementById("sideNav");
 var img = document.getElementById("quoteProfile");
 
-nav.addEventListener("mouseover", function(){
-  img.setAttribute("src","IMG/quote2.jpg");
-})
-nav.addEventListener("mouseout", function(){
-  img.setAttribute("src","IMG/quote1.jpg");
-})
+// nav.addEventListener("mouseover", function(){
+//   img.setAttribute("src","IMG/quote2.jpg");
+// })
+// nav.addEventListener("mouseout", function(){
+//   img.setAttribute("src","IMG/quote1.jpg");
+// })
 
 
 function centerModal() {

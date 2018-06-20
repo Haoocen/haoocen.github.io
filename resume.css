@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
   color: #868e96;
+  font-size: 1.1rem;
 }
 
 @media (min-width: 992px) {
@@ -35,8 +36,8 @@ h2 {
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Saira Extra Condensed', serif;
-  font-size: 1.35rem;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.2rem;
 }
 
 .list-social-icons a {
@@ -59,6 +60,19 @@ h2 {
   color: #7798ce;
 }
 
+.navbar-dark .navbar-nav .nav-link{
+  color: black;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+color: black;
+}
+.navbar-dark .navbar-brand{
+  color: black;
+}
+.navbar-dark .navbar-toggler{
+  color: rgba(0,0,0,.5)
+}
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase;
@@ -72,7 +86,7 @@ h2 {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 17%;
     height: 100vh;
   }
   #sideNav .navbar-brand {
@@ -135,13 +149,13 @@ section.resume-section .resume-item .resume-date {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
-    width:84%;
+    width:98%;
     float:right;
   }
 }
 
 .bg-primary {
-  background-color: #343a40 !important;
+  background-color: #F8F8F8 !important;
 }
 
 .text-primary {
@@ -242,3 +256,4 @@ width:110px;
   margin-top:5%;
   margin-right:4%;
 }
+

@@ -77,9 +77,9 @@ span.header{
 }
 
 .btn:hover{
-    background: rgba(49, 49, 49, 0.2);
+    background: rgba(49, 49, 49, 0.027);
     border: 2px solid rgb(0, 0, 0);
-    color: rgb(133, 38, 38);
+    color: rgb(224, 105, 105);
 }
 
 /* p{

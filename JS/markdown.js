@@ -15,7 +15,7 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-document.querySelector("head").innerHTML+="<link rel='stylesheet' href='../markdown.css'>"
+document.querySelector("head").innerHTML+="<link rel='stylesheet' href='../CSS/markdown.css'>"
 
 // var tmp = document.getElementById("preview-contents").innerHTML;
 // tmp = "<a href='../notes.html'>Back</a>" + tmp;

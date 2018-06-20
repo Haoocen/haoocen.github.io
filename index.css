@@ -26,11 +26,23 @@ h1 {
     font-weight: 900;
 }
 
+@media screen and (min-width: 1000px) {
+    h1 {
+       font-size: 110px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
+    h1 {
+       font-size: 120px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
     h1 {
        font-size: 130px;
     }
-  }
+}
 
 span.header{
     font-weight: 300;
@@ -39,7 +51,7 @@ span.header{
 
 .container{
     font-size: 8rem;
-    padding-top:15%;
+    padding-top:10%;
     margin-bottom:5%;
     max-height: 60%;
 }
@@ -59,6 +71,9 @@ img:hover{
 }
 
 .btn{
+    float: left;
+    position: relative;
+    bottom: 5%;
 	width: 80%;
 	margin-left: 5%;
     height: 5vh;
@@ -81,6 +96,9 @@ img:hover{
 }
 
 p{
-	font-size: 4rem;
-	margin-bottom: 4vh;
+    position: absolute;
+    bottom: 5px;
+    left: 40%;
+    text-align: center;
+   
 }

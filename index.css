@@ -52,29 +52,16 @@ span.header{
 .container{
     font-size: 8rem;
     padding-top:10%;
-    margin-bottom:5%;
+
     max-height: 60%;
 }
 
-img{
-    width: 100vw;
-    max-width: 700px;
-    
-
-}
-img:hover{
-    opacity: .6;
-    width: 100vw;
-    max-width: 700px;
-
-    cursor: pointer;
-}
 
 .btn{
     float: left;
     position: relative;
     bottom: 5%;
-	width: 80%;
+	width: 90%;
 	margin-left: 5%;
     height: 5vh;
     border: 2px solid rgb(15, 41, 46);
@@ -95,10 +82,10 @@ img:hover{
     color: rgb(133, 38, 38);
 }
 
-p{
+/* p{
     position: absolute;
     bottom: 5px;
     left: 40%;
     text-align: center;
    
-}
+} */

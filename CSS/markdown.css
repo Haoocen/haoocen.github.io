@@ -1,6 +1,7 @@
 html{
     max-width: 100vh;
     margin: auto;
+    font-family: serif;
 }
 .big{
     font-size: 2vh;
@@ -10,7 +11,8 @@ html{
     font-size: 1.5vh;
 }
 body{
-    font-size: 1.7vh;
+    font-size: 2vh;
+    font-family: serif;
 }
 
 #myBtn {
